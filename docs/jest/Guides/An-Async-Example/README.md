@@ -74,12 +74,12 @@ it('works with promises', () => {
 ## .resolves
 `.resolves`를 사용하여 이행된 Promise의 값을 다른 matcher와 함께 추출하는 더 간결한 방법도 있습니다. Promise가 거부되면 어설션이 실패합니다.
 
-ts
-Copy code
+```ts
 it('works with resolves', () => {
   expect.assertions(1);
   return expect(user.getUserName(5)).resolves.toBe('Paul');
 });
+```
 
 ## `async`/`await`
 `async`/`await` 구문을 사용하여 테스트를 작성하는 것도 가능합니다. 이전 예제를 `async`/`await` 구문을 사용하여 작성하는 방법은 다음과 같습니다.
